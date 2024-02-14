@@ -2,8 +2,12 @@ import { reqUrl } from "../config";
 import BlogPost from "./blog-post";
 
 export default async function Blog() {
-  const req = await fetch(`${reqUrl}/posts?_fields=id,slug,title,excerpt`);
+  const req = await fetch(`${reqUrl}/posts?_fields=id,slug,title,excerpt`, {
+    cache: "no-store",
+  });
   const posts = await req.json();
+
+  console.log(posts);
 
   return (
     <div className="container mx-auto p-8">

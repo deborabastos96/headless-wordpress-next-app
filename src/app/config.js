@@ -1,1 +1,1 @@
-export const reqUrl = "https://perthvacatecleaning.com.au/wp-json/wp/v2";
+export const reqUrl = "https://demo.krxweb.com/wp-json/wp/v2";

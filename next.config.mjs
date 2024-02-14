@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "perthvacatecleaning.com.au",
+        hostname: "demo.krxweb.com",
       },
     ],
   },

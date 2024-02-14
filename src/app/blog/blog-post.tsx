@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../components/button";
 
 type PostProps = {
   title: string;
@@ -10,7 +11,6 @@ type PostProps = {
 
 export default function BlogPost({
   title,
-  author,
   slug,
   excerpt,
   className,
@@ -23,12 +23,13 @@ export default function BlogPost({
       >
         {title}
       </Link>
-      <p className="mt-2">
+      <p className="mt-2 mb-6">
         {excerpt
           .slice(3, -5)
           .replaceAll("&#8217;", `'`)
-          .replaceAll("&hellip;", `... Read More`)}
+          .replaceAll("&hellip;", `...`)}
       </p>
+      <Button href={`/blog/${slug}`}>Read more</Button>
     </div>
   );
 }

@@ -13,7 +13,7 @@ export default function Button({
   type,
   className,
 }: ButtonProps) {
-  const styles = `pt-3 pb-4 px-5 uppercase text-sm tracking-widest text-violet-50 rounded-full font-semibold bg-violet-800 hover:bg-violet-900 transition-colors ${
+  const styles = `shadow-md py-3 px-5 uppercase text-sm tracking-widest text-violet-50 rounded-full font-semibold bg-violet-800 hover:bg-violet-900 transition-colors ${
     className || ""
   }`;
 

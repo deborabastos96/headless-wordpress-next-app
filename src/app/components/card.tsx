@@ -4,19 +4,12 @@ import Button from "./button";
 
 type CardProps = {
   title?: string;
-  subtitle?: string;
-  btnLabel?: string;
+  category?: string;
   thumbnail: string;
   href: string;
 };
 
-export default function Card({
-  title,
-  subtitle,
-  thumbnail,
-  btnLabel,
-  href,
-}: CardProps) {
+export default function Card({ title, category, thumbnail, href }: CardProps) {
   return (
     <div className="text-center">
       <Link href={href}>
@@ -28,11 +21,11 @@ export default function Card({
           alt="card thumbnail image"
         />
       </Link>
-      <div className="font-light uppercase tracking-wider text-center text-xl mb-6">
+      <div className="font-light uppercase tracking-wider text-center text-xl mb-2">
         {title}
       </div>
-      <div className="text-center text-md mb-4">{subtitle}</div>
-      <Button href={href}>{btnLabel}</Button>
+      <div className="text-center text-md mb-6">{category}</div>
+      <Button href={href}>Learn more</Button>
     </div>
   );
 }
